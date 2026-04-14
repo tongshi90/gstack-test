@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+  text-decoration: none;
+  margin-right: 48px;
+}
+
+.header-menu {
+  flex: 1;
+  border: none;
+}
+
+.main-content {
+  flex: 1;
+  background: #f5f5f5;
+}
+
+.footer {
+  background: #001529;
+  color: #fff;
+  padding: 48px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  padding: 0 24px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.footer-section a {
+  display: block;
+  color: rgba(255,255,255, 0.65);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-section p {
+  color: rgba(255,255,255, 0.65);
+  margin-bottom: 12px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+  text-align: center;
+  color: rgba(255,255,255, 0.45);
+  border-top: 1px solid rgba(255,255,255, 0.1);
+  padding-top: 24px;
+}
+
+/* 页面样式 */
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 80px 48px;
+  margin-bottom: 32px;
+  border-radius: 8px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+.school-intro-page,
+.notice-page,
+.contact-page {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+.intro-text h3,
+.campus-images h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #1890ff;
+}
+
+.image-placeholder {
+  background: #f0f0f0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  border-radius: 4px;
+}
+
+.news-list-page,
+.news-detail-page,
+.announcements-list-page,
+.announcement-detail-page {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+.news-meta,
+.announcement-meta {
+  color: #999;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.news-category,
+.meta-category {
+  margin-right: 16px;
+  padding: 2px 8px;
+  background: #e6f7ff;
+  color: #1890ff;
+  border-radius: 4px;
+}
+
+.news-date,
+.announcement-date {
+  color: #999;
+}
+
+.news-detail,
+.announcement-detail {
+  padding: 24px 0;
+}
+
+.news-title,
+.announcement-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.news-cover {
+  max-width: 100%;
+  margin: 24px 0;
+  border-radius: 8px;
+}
+
+.news-content,
+.announcement-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.registration-form-page {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+.form-container {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #1890ff;
+}
+
+.step-content {
+  padding: 24px 0;
+}
+
+.step-content h2 {
+  margin-bottom: 24px;
+  color: #1890ff;
+}
+
+.form-actions {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.confirmation-step {
+  text-align: center;
+}
+
+.info-summary {
+  font-size: 18px;
+  color: #666;
+  padding: 24px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.registration-success-page {
+  max-width: 600px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+/* 后台管理样式 */
+.admin-logo a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1890ff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  text-decoration: none;
+}
+
+.news-manage,
+.announcements-manage,
+.registrations-manage {
+  padding: 0;
+}
+
+/* 分页样式 */
+.pagination-container {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero {
+    padding: 48px 24px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .logo a {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
