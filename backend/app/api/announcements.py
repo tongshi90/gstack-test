@@ -13,12 +13,15 @@ router = APIRouter(prefix="/api/announcements", tags=["announcements"])
 async def get_announcements_list(
     page: int = Query(1, ge=1),
     page_size: int = Query(10, ge=1, le=100),
+    search: Optional[str] = None,
     start_date: Optional[datetime] = None,
     end_date: Optional[datetime] = None,
     db: Session = Depends(get_db)
 ):
     query = db.query(Announcement)
 
+    if search:
+        query = query.filter(Announcement.title.like(f"%{search}%"))
     if start_date:
         query = query.filter(Announcement.publish_time >= start_date)
     if end_date:
