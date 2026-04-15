@@ -7,7 +7,7 @@ from fastapi.exceptions import RequestValidationError
 
 setup_logging()
 
-app = FastAPI(title="XX中学官方网站 API", version="1.0.0")
+app = FastAPI(title="XX中学官方网站 API", version="1.1.0")
 
 app.add_middleware(
     CORSMiddleware,
